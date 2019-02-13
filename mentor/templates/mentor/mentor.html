@@ -42,5 +42,18 @@
         </div>
     </div>
 </div>
-
+{% for m in mentor %}
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-4">
+            <img src="{{m.images}}" class="sizeimgmentor marginmen" alt=""><br>
+        </div>
+        <div class="col-8">
+            <h4 class="marginh3men grey bold">{{m.nama_mentor}}</h4>
+            <span class="bold marginpmen">{{m.position}}</span>
+            <p class="marginpmen">{{m.description}}</p>
+        </div>
+    </div>
+</div>
+{% endfor %}
 {% endblock %}

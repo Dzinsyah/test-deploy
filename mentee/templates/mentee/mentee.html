@@ -39,4 +39,17 @@
         </div>
     </div>
 </div>
+{% for m in mentee %}
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-4">
+            <img src="{{m.images}}" class="sizeimgmentee marginmentee" alt=""><br>
+        </div>
+        <div class="col-8">
+            <h5 class="marginh3mentee bold">{{m.nama_mentee}}</h5>
+            <p class="marginpmentee">{{m.description}}</p>
+        </div>
+    </div>
+</div>
+{% endfor %}
 {% endblock %}

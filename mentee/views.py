@@ -1,5 +1,8 @@
 from django.shortcuts import render
-def mentee(request):
-    return render(request, 'mentee/mentee.html',{})
+from .models import Mentee
 
-# Create your views here.
+def mentee(request):
+    add_post = Mentee.objects.all()
+    return render(request, 'mentee/mentee.html',{'mentee':add_post})
+
+
